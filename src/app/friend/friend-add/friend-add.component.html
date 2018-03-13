@@ -5,22 +5,22 @@
       <div class="form-group row">
         <label for="inputName" class="col-sm-3 form-control-label">Name</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="inputName" [(ngModel)]="inputInfo.name">
+          <input type="text" class="form-control" id="inputName" #inputName>
         </div>
       </div>
       <div class="form-group row">
         <label for="inputEmail" class="col-sm-3 form-control-label">Email</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="inputEmail" [(ngModel)]="inputInfo.email">
+          <input type="text" class="form-control" id="inputEmail" #inputEmail>
         </div>
       </div>
       <div class="form-group row">
         <label for="inputContact" class="col-sm-3 form-control-label">Contact No.</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="inputContact" [(ngModel)]="inputInfo.contact">
+          <input type="text" class="form-control" id="inputContact" #inputContact>
         </div>
       </div>
-      <button type="Add" class="btn btn-success" (click)="onAddFriend()">Add Friend</button>
+      <button type="Add" class="btn btn-success" (click)="onAddFriend(inputName,inputEmail,inputContact)">Add Friend</button>
     </div>
   </div>
 </div>
