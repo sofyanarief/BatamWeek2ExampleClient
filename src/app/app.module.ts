@@ -8,6 +8,11 @@ import { FriendComponent } from './friend/friend.component';
 import { FriendAddComponent } from './friend/friend-add/friend-add.component';
 import { FriendListComponent } from './friend/friend-list/friend-list.component';
 import { HoverHighlightDirective } from './hover-highlight.directive';
+import { AppRoutingModule } from './/app-routing.module';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -16,11 +21,16 @@ import { HoverHighlightDirective } from './hover-highlight.directive';
     FriendComponent,
     FriendAddComponent,
     FriendListComponent,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    ContactUsComponent,
+    HeaderComponent,
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
