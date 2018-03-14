@@ -18,6 +18,7 @@ import { FriendsService } from './friend/friends.service';
 import { FindPipe } from './find.pipe';
 import { AuthService } from './auth/auth.service';
 import { AuthGuardService } from './auth/auth-guard.service';
+import { HttpModule } from "@angular/http";
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AuthGuardService } from './auth/auth-guard.service';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [FriendsService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
