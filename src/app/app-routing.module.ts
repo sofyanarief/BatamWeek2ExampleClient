@@ -6,11 +6,12 @@ import { FriendComponent } from './friend/friend.component';
 import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { AuthGuardService } from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
-  { path: "friend", component: FriendComponent },
+  { path: "friend", canActivate: [AuthGuardService], component: FriendComponent },
   { path: "contactus", component: ContactUsComponent},
   { path: "not-found", component: PageNotFoundComponent},
   { path: "*", redirectTo: "/not-found"}

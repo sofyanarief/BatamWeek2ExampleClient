@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FriendsService } from './friend/friends.service';
 import { FindPipe } from './find.pipe';
+import { AuthService } from './auth/auth.service';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 
 @NgModule({
@@ -37,7 +39,7 @@ import { FindPipe } from './find.pipe';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [FriendsService],
+  providers: [FriendsService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

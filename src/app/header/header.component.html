@@ -6,10 +6,13 @@
         <a class="nav-link" routerLink="/home">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/friend">Friend<span class="sr-only">(current)</span></a>
+        <a class="nav-link" *ngIf="authService.loggedIn" routerLink="/friend">Friend<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/contactus">Contact Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="authService.loggedIn" (click)="onLogout()">[Logout]</a>
       </li>
     </ul>
   </div>
