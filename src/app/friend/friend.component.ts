@@ -7,8 +7,7 @@ import { FriendsService } from "./friends.service";
 @Component({
   selector: 'app-friend',
   templateUrl: './friend.component.html',
-  styleUrls: ['./friend.component.css'],
-  providers: [FriendsService]
+  styleUrls: ['./friend.component.css']
 })
 export class FriendComponent implements OnInit {
 
