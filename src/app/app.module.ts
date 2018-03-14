@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FriendsService } from './friend/friends.service';
+import { FindPipe } from './find.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FriendsService } from './friend/friends.service';
     ContactUsComponent,
     HeaderComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FindPipe
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ export class FriendListComponent implements OnInit {
 
   @Input() myFriends: Friend[];
 
+  searchStr = "";
+
   constructor() { }
 
   ngOnInit() {
